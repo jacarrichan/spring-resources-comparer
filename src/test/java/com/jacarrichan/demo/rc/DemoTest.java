@@ -14,12 +14,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**  指定当前生效的配置文件( active profile)，如果是 appplication-dev.yml 则 dev   **/
 @ActiveProfiles("dev")
 /** 指定  @SpringBootApplication  启动类 和 端口  **/
-@SpringBootTest(classes = DemoTest.ConfigContext.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = DemoTest.ConfigContext.class,
+        webEnvironment = SpringBootTest.WebEnvironment.NONE
+)
 public class DemoTest {
 
-    @Value("${spring.application.name}")
     public String applicationName;
 
+    @Value("${spring.application.name}")
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+    }
 
     @Test
     public void test1() {
