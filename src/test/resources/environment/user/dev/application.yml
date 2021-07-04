@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: resources-comparer-dev
+string:
+  - dev1
+  - dev2
+  - dev3

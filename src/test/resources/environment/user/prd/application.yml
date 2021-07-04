@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: resources-comparer-prd
+string:
+  - prd1
+  - prd2
+  - prd3
